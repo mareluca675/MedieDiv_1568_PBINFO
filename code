@@ -1,0 +1,31 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int
+main ()
+{
+  int long long n,  d;
+  double maDiv, nrDiv = 0, sumDiv = 0;
+  cin >> n;
+  for (d = 1; d <= n; d++)
+    {
+      if (n % d == 0)
+    {
+      sumDiv = sumDiv + d;
+      nrDiv++;
+    }
+    }
+  maDiv = sumDiv / nrDiv;
+
+  maDiv = maDiv * 100;
+   
+  maDiv = int(maDiv);
+  
+  maDiv = maDiv / 100;
+
+  cout << fixed << setprecision(2) << maDiv;
+
+  return 0;
+}
